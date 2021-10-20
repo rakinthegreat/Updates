@@ -1,1 +1,1 @@
-abc.com
+https://github.com/rakinthegreat/BanCOVID-Source/releases/download/0.5/app-release.apk
