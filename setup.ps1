@@ -33,8 +33,8 @@ if (-not $isAdmin) {
 Write-Host "==================" -ForegroundColor Cyan
 Write-Host "  CHROME UTILITY  " -ForegroundColor White
 Write-Host "==================" -ForegroundColor Cyan
-Write-Host "1. Install and Lock Extension"
-Write-Host "2. Uninstall and Unlock Extension"
+Write-Host "1. Install and Lock Extension (Chrome will restart)"
+Write-Host "2. Uninstall and Unlock Extension (Chrome will restart)"
 Write-Host "3. Exit"
 
 $choice = Read-Host "`nSelect an action (1/2/3)"
@@ -94,7 +94,7 @@ if ($choice -eq '1') {
     Start-Sleep -Seconds 1
     Start-Process -FilePath "chrome.exe" -ArgumentList "chrome://extensions" -ErrorAction SilentlyContinue
     
-    Write-Host "Chrome has been installed." -ForegroundColor Cyan
+    Write-Host "Chrome Utility has been installed." -ForegroundColor Cyan
 } 
 elseif ($choice -eq '2') {
     Write-Host "`n[+] Starting Uninstallation..." -ForegroundColor Yellow
