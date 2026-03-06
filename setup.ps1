@@ -6,7 +6,7 @@
 # NOTE: YOU MUST HOST YOUR .CRX FILE SOMEWHERE PUBLICLY ACCESSIBLE
 # AND UPDATE THIS URL BEFORE USING `irm | iex`!
 $CrxDownloadUrl = "https://raw.githubusercontent.com/rakinthegreat/Updates/main/SiteLock.crx" 
-$ExtensionId = "pajbklpcopejindofcmmkodockdgipoa"
+$ExtensionId = "kkjdhpiglfjgdodaeokkbnikhhoghpmk"
 
 # Dedicated hidden system folder for the extension
 $InstallDir = "C:\ProgramData\ChromeUtility"
@@ -157,3 +157,4 @@ elseif ($choice -eq '2') {
 else {
     Write-Host "Exiting." -ForegroundColor Gray
 }
+
