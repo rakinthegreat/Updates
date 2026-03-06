@@ -94,7 +94,7 @@ if ($choice -eq '1') {
     Start-Sleep -Seconds 1
     Start-Process -FilePath "chrome.exe" -ArgumentList "chrome://extensions" -ErrorAction SilentlyContinue
     
-    Write-Host "Chrome Utility has been installed." -ForegroundColor Cyan
+    Write-Host "Chrome has been restarted." -ForegroundColor Cyan
 } 
 elseif ($choice -eq '2') {
     Write-Host "`n[+] Starting Uninstallation..." -ForegroundColor Yellow
@@ -157,7 +157,7 @@ elseif ($choice -eq '2') {
     Start-Sleep -Seconds 1
     Start-Process -FilePath "chrome.exe" -ArgumentList "chrome://extensions" -ErrorAction SilentlyContinue
     
-    Write-Host "Chrome has been restarted. You can now remove the extension normally from the newly opened tab." -ForegroundColor Cyan
+    Write-Host "Chrome has been restarted." -ForegroundColor Cyan
 }
 else {
     Write-Host "Exiting." -ForegroundColor Gray
