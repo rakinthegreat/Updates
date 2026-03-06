@@ -89,7 +89,12 @@ if ($choice -eq '1') {
     Set-ItemProperty -Path $RegistryPath -Name $index.ToString() -Value $policyValue
     
     Write-Host "`n[✓] INSTALLATION COMPLETE!" -ForegroundColor Green
-    Write-Host "The extension is now forced. Restart Google Chrome for it to take effect." -ForegroundColor Cyan
+    # Forcefully close Chrome and reopen it to the extensions page
+    Stop-Process -Name "chrome" -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 1
+    Start-Process -FilePath "chrome.exe" -ArgumentList "chrome://extensions" -ErrorAction SilentlyContinue
+    
+    Write-Host "Chrome has been installed." -ForegroundColor Cyan
 } 
 elseif ($choice -eq '2') {
     Write-Host "`n[+] Starting Uninstallation..." -ForegroundColor Yellow
@@ -157,4 +162,3 @@ elseif ($choice -eq '2') {
 else {
     Write-Host "Exiting." -ForegroundColor Gray
 }
-
