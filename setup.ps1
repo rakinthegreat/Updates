@@ -219,4 +219,5 @@ while ($true){
         Write-Host "Exiting." -ForegroundColor Gray
         break
     }
+    Clear-Host
 }
