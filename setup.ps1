@@ -215,7 +215,7 @@ while ($true){
         
         Write-Host "Chrome has been restarted." -ForegroundColor Cyan
     }
-    else {
+    elseif ($choice -eq '3') {
         Write-Host "Exiting." -ForegroundColor Gray
         break
     }
